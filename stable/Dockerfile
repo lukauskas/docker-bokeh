@@ -10,7 +10,7 @@ RUN pip install --upgrade pip \
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-ENV ORIGIN="127.0.0.1:5100" PORT="5100"
+ENV ORIGIN="127.0.0.1:5100" PORT="5100" PREFIX=""
 
 COPY ./app /app
 ENTRYPOINT ["./entrypoint.sh"]
