@@ -7,10 +7,10 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-ENV VERSION=0.12.10
+ARG VERSION
 
 RUN pip install --upgrade pip \
-    && pip install --pre -i https://pypi.anaconda.org/bokeh/channel/dev/simple --extra-index-url https://pypi.python.org/simple/ bokeh==$VERSION \
+    && pip install --pre -i https://pypi.anaconda.org/bokeh/channel/dev/simple --extra-index-url https://pypi.python.org/simple/ bokeh==${VERSION} \
     && rm -rf ~/.cache/pip
 
 # Add entrypoint (this allows variable expansion)
