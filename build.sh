@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 latest=true
 name="lukauskas/bokeh"
 for version in $(cat STABLE_VERSIONS); do
