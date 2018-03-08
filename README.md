@@ -1,15 +1,16 @@
 # docker-bokeh
 Dockerfiles for running bokeh in Docker.
+Builds for most recent docker releases (both stable and dev) are generated.
 
-Two versions available: stable and dev.
-
-You can run both versions as follows:
+To run the latest stable release do:
 
 ```
-docker run -p 5100:5100 lukauskas/bokeh:stable 
+docker run -p 5100:5100 lukauskas/bokeh:latest 
 ```
+To run latest dev release, use the tag `dev`. 
+For specific version number, just use the version number as a tag.
 
-Above will map the container port 5100 to port 5100 of the host machine. Adjust it as appropriate.
+The command above will map the container port 5100 to port 5100 of the host machine. Adjust it as appropriate.
 By default you should be able to access the bokeh visualisation at http://172.0.0.1:5100.
 
 Two environment variables are supported:
@@ -23,7 +24,7 @@ For instance, if the application will be hosted on `http://www.example.com:1234`
 Environment variable example:
 
 ```
-docker run -p 5100:5100 -e PREFIX=foo -e ORIGIN=www.example.com:5100 lukauskas/bokeh:stable 
+docker run -p 5100:5100 -e PREFIX=foo -e ORIGIN=www.example.com:5100 lukauskas/bokeh:latest 
 ```
 
 Will allow one to access the visualisation at www.example.com:5100/foo/app
