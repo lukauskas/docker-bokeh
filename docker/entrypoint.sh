@@ -4,4 +4,4 @@ if [ -z "${PREFIX}" ]; then
 else
     PREFIX_PARAM="--prefix ${PREFIX}";
 fi
-bokeh serve --port ${PORT} --address 0.0.0.0 --allow-websocket-origin ${ORIGIN} ${PREFIX_PARAM} /app
+bokeh serve --port ${PORT} --address 0.0.0.0 --allow-websocket-origin ${ORIGIN} ${PREFIX_PARAM} --log-level ${LOG_LEVEL} /app
