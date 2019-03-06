@@ -1,5 +1,10 @@
 FROM python:3.6-stretch
 
+RUN apt-get update &&  apt-get install libjpeg-dev zlib1g-dev \
+  && apt-get -yq autoremove \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
+
 # Install nodejs (see: https://askubuntu.com/a/720814)
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash \
     && apt-get install nodejs \
