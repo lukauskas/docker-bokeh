@@ -6,9 +6,9 @@ RUN apk --update add --no-cache --virtual .build-deps \
                                           gfortran \
                                           musl-dev \
                                           g++ \
-                                          jpeg-dev \
-                                          zlib-dev \
-    && apk add --no-cache nodejs
+    && apk add --no-cache libjpeg-turbo-dev \
+                          nodejs  \
+                          zlib-dev
 
 ARG VERSION
 

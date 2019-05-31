@@ -27,6 +27,7 @@ for version in $(cat DEV_VERSIONS); do
     fi
 
     docker build --build-arg VERSION=${version} docker ${tag};
+    docker build -f docker/Dockerfile.alpine --build-arg VERSION=${version} docker ${alpine_tag};
 
     latest=false;
 done
