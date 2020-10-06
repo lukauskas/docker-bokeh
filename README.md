@@ -1,3 +1,5 @@
+Not actively maintained - please fork
+
 # docker-bokeh
 Dockerfiles for running bokeh in Docker.
 Builds for most recent docker releases (both stable and dev) are generated.
